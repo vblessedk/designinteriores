@@ -47,6 +47,7 @@ header button{
 
 .whatsapp{ /*define a classe " whatsapp"*/
     position: relative;   /*permite que os elementos posicionados dentro da classe sejam posicionados em relação a ela*/
+    z-index: 999;
 }
 
 .whatsapp img{
@@ -97,7 +98,7 @@ header button{
 }
 
 .div-1 p{
-    font-size: 2rem;
+    font-size: 1.3rem;
     margin: 1.2rem;
     color: #ffffff;
 
@@ -126,29 +127,45 @@ header button{
 }
 
 .card{
-    width: 200px;
-    height: 480px;
+    width: 1000px;
+    height: 510px;
     box-shadow: 20px 20px 50px rgb(180, 119, 76);
     border-radius: 15px;
     background-color: #ffffff;
     color: black;
 }
 
-.card img{
-    width: 14.8vw;
-    height: 35vh;
+.cardum {
+    width: 350px;
+    height: 340px;
+    box-shadow: 20px 20px 50px rgb(180, 119, 76);
     border-radius: 15px;
-    margin-top: 2rem;
-    
-
+    background-color: #ffffff;
+    color: black;
 
 }
 
-.card p{
-   padding: 1rem;
-   margin-top: -3rem;
+.caixa1{
+    background-image: url(imagens/banheiro.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat ;
 }
 
+.caixa2{
+    background-image: url(imagens/casa\ 2\ \(1\).jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat ;
+
+}
+
+.caixa3{
+    background-image: url(imagens/cozinha.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat ;
+}
 .content{
     padding: 20px;
     text-align: center;
@@ -162,13 +179,13 @@ header button{
     transform: translateY(0px);
 }
 
-.container h2{
+/* .container h2{
     position: absolute;
     right: 30px;
     font-size: 5rem;
     color: #000000;
     
-}
+} */
 
 .container h3{
     font-size: 1.8em;
@@ -181,6 +198,13 @@ header button{
     color: #000000;
     font-weight: 300;
     margin-top: 4rem;
+}
+
+.paragrafo p{
+    color: #ffffff;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5rem;
 }
 
 .container a{
@@ -197,9 +221,37 @@ header button{
 }
 
 footer{
-    background-color: rgb(180, 119, 76) ;
-    width: 100%;
-    padding: min(10vh, 4rem);
+
+    display: flex; /* tornando os itens (caixas) flexiveis */
+    justify-content: space-evenly; /* justificando o conteúdo*/
+    align-items:center; /* alinhando o conteúdo*/
+    padding: 25px; /* preenchimento da página*/
+    background-color: rgb(180, 119, 76) ;  
+}
+
+.div-final img{
+    width: 130px; /* imagem do rodape*/
+    border-radius: 15px;
+}
+
+.div-icons h2{
+    color: #ffffff; /* cor do subtítulo*/
+}
+
+.div-icons i{
+    padding: 7px; /*dando um preenchimento (tamanho) para os icones*/
+    font-size: 35px; /* esqueci*/
+}
+
+.div-icons i:hover{
+    transition: 00.50s ease; /* transição dos icones */
+    transform: scale(1.3);  /* transformação dos icones*/
+    color:#ffffff; /* cor da transição dos icones*/
+}
+
+.div-icons a{
+    text-decoration: none; /* retirando o Hiperlink dos icones*/
+    color: #ffffff; /* dando uma cor para os icones*/
 }
 
 @media (max-width: 888px){
@@ -211,6 +263,16 @@ footer{
     header button{
         width: 10rem;
         height: 0.8rem;
+    }
+
+    .sessão-00{
+        padding: min(-8vh, 20rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+
     }
 
     .sessão-1{
@@ -243,5 +305,19 @@ footer{
     .div-2 img{
         width: 20rem;
         height: auto;
+    }
+
+    .card{
+        width: 23rem;
+        
+        
+    }
+
+    .card h3{
+        font-size: 1rem;
+    }
+
+    .card p{
+        font-size: 0.7rem;
     }
 }
